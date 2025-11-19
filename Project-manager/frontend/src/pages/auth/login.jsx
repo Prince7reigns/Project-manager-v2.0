@@ -45,7 +45,7 @@ const Login = () => {
     
     if(accessToken){
       localStorage.setItem("token",accessToken)
-      updateUser(response.data.data)
+      updateUser(response.data.data.user)
       if(role === "admin"){
         navigate("/admin/dashboard")
       }else{
